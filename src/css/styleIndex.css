@@ -33,14 +33,14 @@ div {
     margin-bottom: 2rem;
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-form > input {
+.form > input {
     background-color: #ecf0f1;
     border: none;
     width: 13rem;
@@ -52,6 +52,7 @@ form > input {
 .correctPin {
     display: none;
 }
+
 .buttons {
     width: 13rem;
     display: flex;
@@ -67,7 +68,7 @@ button {
     border-radius: 4px;
 }
 
-.hintsToRightPin {
+#hintsToRightPin {
     display: none;
     margin-top: .7rem;
     color: red;
