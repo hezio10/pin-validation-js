@@ -30,18 +30,22 @@ function verifyPin() {
     }
     
     const pin = parseInt(enteredPin.value);
-        
- 
+
 
     if (pin === pinValue) {
         displayMessage("O pin esta correcto", 'green');
         alert("Parabens, voce acertou o PIN.");
+    
+    } else if((pinValue > pin) && ((pinValue - pin) > 5000)){
+        displayMessage("Erro! Tente um numero muito maior.");
 
-    } else if(pinValue > pin) {
-        displayMessage("Erro! Tente um numero maior.");
+    } else if((pinValue > pin) && ((pinValue - pin) < 5000)) {
+        displayMessage("Erro! Tente um numero maior.");     
+
+    } else if ((pinValue < pin) && ((pinValue - pin) > 5000)) {
+        displayMessage("Erro! Tente um numero muito menor.");
         
-
-    } else if (pinValue < pin) {
+    } else if ((pinValue < pin) && ((pinValue - pin) < 5000)) {
         displayMessage("Erro! Tente um numero menor.");
         
     } else {
