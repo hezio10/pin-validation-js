@@ -9,7 +9,7 @@ A web application, using js, which validates a PIN(Personal Identification Numbe
 - Then you insert the PIN and click on the "Verificar" button, and it will tell you whether the PIN is correct, greater or less than the expected;
 
 - If the right PIN is greater and the difference between the entered PIN and the right PIN is more than 5000 it will tell you that it's much greater, and if it's less than 5000 it will tell you that it's just greater;
-- If the right PIN is less and the difference between the entered PIN and the right PIN is more than 5000 it will tell you that it's much less, and if it's less than 5000 it will tell you that it's just less;
+- If the right PIN is less and the difference between the entered PIN and the right PIN is more than 5000 it will tell you that it's much less, and if it's less than 5000 it will tell you that it's just less.
 
 
 ## How was it developed?

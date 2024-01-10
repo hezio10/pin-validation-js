@@ -10,7 +10,7 @@ let pinValue;
 
 function getPin() {
     pinValue = Math.floor(Math.random() * (9999-1000 + 1)) + 1000;
-   correctPin.textContent = 'O pin correcto e ' + pinValue;
+   correctPin.textContent = 'O pin correcto é ' + pinValue;
    enteredPin.value = "";
    correctPin.style.display = 'block';
    hintsToRightPin.style.display = 'none';
@@ -19,37 +19,36 @@ function getPin() {
 
 function verifyPin() {
 
-
     if (enteredPin.value === ""){
-        alert("A caixa de input nao pode estar vazia");
+        alert("A caixa de input não pode estar vazia.");
         return;
 
     } else if(enteredPin.value.length < 4) {
         alert("O PIN tem que ter pelo menos 4 digitos.Tente Novamente!");
         return;
+
     }
     
-    const pin = parseInt(enteredPin.value);
+    const inputPin = parseInt(enteredPin.value);
 
-
-    if (pin === pinValue) {
-        displayMessage("O pin esta correcto", 'green');
-        alert("Parabens, voce acertou o PIN.");
+    if (inputPin === pinValue) {
+        displayMessage("O pin está correcto.", 'green');
+        alert("Parabéns, você acertou o PIN.");
     
-    } else if((pinValue > pin) && ((pinValue - pin) > 5000)){
-        displayMessage("Erro! Tente um numero muito maior.");
+    } else if((pinValue > inputPin) && ((pinValue - inputPin) > 5000)){
+        displayMessage("Erro! Tente um número muito maior.");
 
-    } else if((pinValue > pin) && ((pinValue - pin) < 5000)) {
-        displayMessage("Erro! Tente um numero maior.");     
+    } else if((pinValue > inputPin) && ((pinValue - inputPin) < 5000)) {
+        displayMessage("Erro! Tente um número maior.");     
 
-    } else if ((pinValue < pin) && ((pinValue - pin) > 5000)) {
-        displayMessage("Erro! Tente um numero muito menor.");
+    } else if ((pinValue < inputPin) && ((inputPin - pinValue) > 5000)) {
+        displayMessage("Erro! Tente um número muito menor.");
         
-    } else if ((pinValue < pin) && ((pinValue - pin) < 5000)) {
-        displayMessage("Erro! Tente um numero menor.");
+    } else if ((pinValue < inputPin) && ((inputPin - pinValue) < 5000)) {
+        displayMessage("Erro! Tente um número menor.");
         
     } else {
-        alert("O pin tem que ser um numero. Tente novamente!");
+        alert("O pin tem que ser um número. Tente novamente!");
     }
 
     function displayMessage(message, color) {
@@ -61,7 +60,6 @@ function verifyPin() {
 
     enteredPin.value = "";
 }
-
 
 
 btnGetPin.addEventListener('click', getPin);
